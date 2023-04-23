@@ -330,6 +330,9 @@ main #tokenomics .cd div {
   border: 1px solid #ffc700;
   padding: 20px 10px;
 }
+main #swap {
+  width: 100%;
+}
 
 footer {
   padding-block: 30px;
