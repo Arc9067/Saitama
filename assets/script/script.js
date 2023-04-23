@@ -1,3 +1,5 @@
+const loader = document.querySelector("#loader");
+
 ScrollReveal({
   reset: true,
   duration: 2000,
@@ -28,3 +30,7 @@ ScrollReveal({
   reset: true,
   interval: 200,
 }).reveal(".abo-d");
+
+window.addEventListener("load", () => {
+  loader.style.display = "none";
+});
