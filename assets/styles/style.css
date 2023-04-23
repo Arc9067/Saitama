@@ -263,4 +263,9 @@ main #tokenomics .cd div {
   background: #924315;
   border: 1px solid #ffc700;
   padding: 20px 10px;
+}
+
+footer {
+  padding-block: 30px;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,7 +1,30 @@
-const loadingsection = document.querySelector("#loading");
+ScrollReveal({
+  reset: true,
+  duration: 2000,
+}).reveal(".header-txt");
 
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    loadingsection.style.display = "none";
-  }, 5000);
-});
+ScrollReveal({
+  reset: true,
+  duration: 1000,
+}).reveal(".hero-para");
+
+ScrollReveal({
+  reset: true,
+  duration: 1500,
+}).reveal(".button");
+
+ScrollReveal({
+  reset: true,
+  duration: 2500,
+  interval: 200,
+}).reveal(".logo");
+
+ScrollReveal({
+  reset: true,
+  duration: 2500,
+}).reveal(".abt-txt");
+
+ScrollReveal({
+  reset: true,
+  interval: 200,
+}).reveal(".abo-d");
