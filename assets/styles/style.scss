@@ -1,0 +1,280 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@400;500;600;700&family=Work+Sans:wght@600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
+
+@font-face {
+  font-family: "Otaku Rant";
+  src: url(../Otaku\ Rant\ Bold.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+
+/*===== VARIABLES CSS =====*/
+:root {
+  --header-height: 3rem;
+  --font-semi: 600;
+  /*===== Colores =====*/
+  --first-color: #f8c74b;
+  --body-bg: #ca5918;
+  /*===== typography =====*/
+  --body-font: "Changa", sans-serif;
+  --Otaku: "Otaku Rant";
+  --big-font-size: 2rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+  --white: #fff;
+  --mb-6: 3rem;
+  /*===== z index =====*/
+  --z-back: -10;
+  --z-fixed: 100;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --big-font-size: 3.5rem;
+    --h2-font-size: 2rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--body-font), serif;
+  font-size: var(--normal-font-size);
+  color: var(--second-color);
+  background: var(--body-bg);
+  color: var(--white);
+  position: relative;
+}
+
+.button {
+  display: block;
+  width: max-content;
+  text-transform: capitalize;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img:not(.nav-logo, .no) {
+  margin-inline: auto;
+}
+
+/*===== CLASS CSS ===== */
+a.button {
+  padding: 16px 32px;
+  background: #f8c74b;
+  box-shadow: 0px 4px 8px rgba(9, 50, 67, 0.16);
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 140%;
+  color: #0c0c0c;
+}
+.pad-50 {
+  padding-block: 50px;
+}
+
+header {
+  padding-block: 20px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#hero {
+  width: 100%;
+  background: url(../img/hero-bg.png) center center no-repeat;
+  background-size: cover;
+  background-color: var(--body-bg);
+  padding-block: 100px;
+  position: relative;
+
+  h1.title {
+    font-family: var(--Otaku), sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 120%;
+
+    @media (max-width: 700px) {
+      font-size: 48px;
+      line-height: 120%;
+    }
+  }
+
+  p.info {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    max-width: 500px;
+  }
+
+  .logo {
+    max-width: 25rem;
+
+    @media (max-width: 700px) {
+      max-width: 20rem;
+    }
+  }
+}
+
+main {
+  width: 100%;
+
+  #about {
+    width: 100%;
+    position: relative;
+
+    .abso {
+      position: absolute;
+    }
+
+    .bottom {
+      right: 0;
+      bottom: 0;
+    }
+
+    .container {
+      z-index: 2;
+      h1.title {
+        font-family: var(--Otaku), sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 120%;
+        position: relative;
+        // z-index: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width: 700px) {
+          font-size: 36px;
+          line-height: 120%;
+        }
+      }
+
+      h1.title::before {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        width: 246px;
+        height: 98px;
+        background: #924315;
+        border-radius: 20px;
+        // inset: 0 -10% 0 0;
+      }
+      @media (max-width: 700px) {
+        h1.title::before {
+          width: 158px;
+          height: 59.79px;
+          background: #924315;
+          border-radius: 16px;
+        }
+      }
+
+      .in {
+        width: 100%;
+        // background-color: red;
+        margin-inline: auto;
+        @media (min-width: 1000px) {
+          width: 90%;
+        }
+        .inn {
+          width: 100%;
+          background-color: #924315;
+          border-radius: 20px;
+          padding: 45px 25px;
+
+          div {
+            @media (max-width: 700px) {
+              flex-direction: column !important;
+            }
+            p {
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 140%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #gallery {
+    width: 100%;
+
+    h1.title {
+      font-family: var(--Otaku), sans-serif;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 120%;
+      text-align: center;
+    }
+  }
+
+  #tokenomics {
+    width: 100%;
+
+    @media (max-width: 700px) {
+      .img-div {
+        order: 2;
+      }
+    }
+
+    .logo {
+      max-width: 25rem;
+
+      @media (max-width: 700px) {
+        max-width: 100%;
+      }
+    }
+
+    .cd {
+      width: 100%;
+      div {
+        width: 90%;
+        background: #924315;
+        border: 1px solid #ffc700;
+        padding: 20px 10px;
+      }
+    }
+  }
+}
